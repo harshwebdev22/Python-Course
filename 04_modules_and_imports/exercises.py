@@ -8,6 +8,11 @@ No solutions provided.
 #    (call as mathy.is_even) and `from mathy import is_even` (call
 #    directly). Print both results for n=4.
 
+import mathy
+from mathy import is_even
+
+print(mathy.is_even(n=4))
+print(is_even(n=4))
 
 # 2. Add a second function to mathy.py at module level that just calls
 #    print("mathy loaded") with no function wrapper (i.e. runs on import).
@@ -16,7 +21,12 @@ No solutions provided.
 #    print statement in mathy.py and confirm it does NOT run when imported,
 #    only when you `python3 mathy.py` directly.
 
+if __name__ == "__main__":
+    print("exercise started")
 
 # 3. Inside `mypackage/utils.py`, add a new function `whisper(text: str) ->
 #    str` that lowercases and appends "...". Import and call it here using
 #    the `from mypackage.utils import whisper` form.
+
+from mypackage.utils import whisper
+print(whisper("Heloo"))
